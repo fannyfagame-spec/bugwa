@@ -2,7 +2,7 @@ module.exports = {
   tokens: "8390230405:AAECDynhMQh0laTki183_nnE1w5I3eGKaIg", 
   officialToken: "8390230405:AAECDynhMQh0laTki183_nnE1w5I3eGKaIg",
   owner: "1285824577", 
-  ipvps: "127.0.0.1",
+  ipvps: "https://fannyfagame-spec.github.io/bugwa",
   port: "3000"
 };
 /*
