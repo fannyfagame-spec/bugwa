@@ -1,6 +1,4 @@
 🚀 FANNYFA TELEGRAM BOT BASE
-�
-￼ ￼ ￼ ￼ 
 
 🧠 About This Project
 Simple & Powerful Telegram Bot Base
