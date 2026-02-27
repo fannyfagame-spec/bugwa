@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>FannyFa Store - Layanan Integrasi H2H TopUp & APK Premium Terbaru</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" href="https://files.catbox.moe/fz0fd8.jpg" type="image/png">
+
+    <meta name="description" content="FannyFa Store: Platform topup H2H terdepan di Indonesia. Layanan cepat, aman, dan terpercaya untuk pulsa, data, game, e-wallet, dan pembayaran digital.">
+    <meta name="keywords" content="FannyFa Store, topup H2H, pulsa, paket data, game online, e-wallet, pembayaran digital, integrasi API, CiaaSoft Official">
+    <meta name="author" content="CiaaSoft Official">
+    <meta property="og:title" content="FannyFa Store - Produk Digital Terpercaya">
+    <meta property="og:description" content="Platform topup H2H terbaru di Indonesia. Layanan cepat, aman, dan terpercaya.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.FannyFa Store.web.id/">
+    <meta property="og:image" content="https://files.catbox.moe/fz0fd8.jpg">
+    <meta property="og:image:alt" content="FannyFa Store">
+    <meta property="og:site_name" content="FannyFa Store">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FannyFa Store - Produk Digital Terpercaya">
+    <meta name="twitter:description" content="Platform topup H2H terbaru di Indonesia. Layanan cepat, aman, dan terpercaya.">
+    <meta name="twitter:image" content="https://files.catbox.moe/fz0fd8.jpg">
+
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="Fc6QA46VCIx7TMd9ltQPmQ" async></script>
+  <style>
+    :root {
+      --primary-hue: 245;
+      --secondary-hue: 345;
+      --primary-color: hsl(var(--primary-hue), 100%, 60%);
+      --primary-color-dark: hsl(var(--primary-hue), 100%, 50%);
+      --primary-color-light: hsl(var(--primary-hue), 100%, 95%);
+      --secondary-color: hsl(var(--secondary-hue), 100%, 65%);
+      --secondary-color-light: hsl(var(--secondary-hue), 100%, 95%);
+      --text-dark: hsl(var(--primary-hue), 15%, 15%);
+      --text-light: hsl(var(--primary-hue), 15%, 45%);
+      --text-white: hsl(0, 0%, 100%);
+      --bg-light: hsl(var(--primary-hue), 20%, 98%);
+      --bg-white: hsl(0, 0%, 100%);
+      --bg-dark: hsl(var(--primary-hue), 20%, 10%);
+      --border-color: hsl(var(--primary-hue), 20%, 90%);
+      --shadow: 0 10px 30px hsla(var(--primary-hue), 50%, 20%, 0.1);
+      --shadow-sm: 0 5px 15px hsla(var(--primary-hue), 50%, 20%, 0.05);
+      --border-radius-md: 12px;
+      --border-radius-lg: 16px;
+      --transition-cubic: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --font-family: 'Inter', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+      background-color: var(--primary-color);
+      color: var(--text-white);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 6rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+      line-height: 1.2;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      color: var(--text-light);
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.125rem;
+    }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-cubic);
+  text-align: center;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+  font-size: 1rem;
+
+  /* tambahan halus */
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: scale(0.97);
+}
+
+    .btn i {
+      font-size: 1.1em;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: var(--text-white);
+      box-shadow: 0 4px 15px hsla(var(--primary-hue), 100%, 60%, 0.3);
+    }
+
+.btn-primary:hover {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px hsla(var(--primary-hue), 100%, 50%, 0.4);
+}
+.btn-primary i {
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover i {
+  transform: translateX(3px);
+}
+    .btn-secondary {
+      background-color: var(--bg-white);
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary-color-light);
+      transform: translateY(-3px);
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+    .btn-outline:hover {
+      background-color: var(--primary-color);
+      color: var(--text-white);
+    }
+
+    header {
+      background-color: var(--bg-white);
+      box-shadow: var(--shadow-sm);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: var(--transition-cubic);
+      padding: 1rem 0;
+    }
+
+    header.scrolled {
+      box-shadow: var(--shadow);
+      padding: 0.75rem 0;
+      background-color: hsla(0, 0%, 100%, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo img {
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+    .logo:hover img {
+      transform: rotate(-7deg) scale(1.05);
+    }
+
+    .logo-text {
+      font-weight: 800;
+      font-size: 1.75rem;
+      color: var(--primary-color);
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem; 
+    }
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+
+  /* tambahan animasi */
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: navOpen 0.45s ease forwards;
+}
+
+@keyframes navOpen {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links a {
+  opacity: 0;
+  animation: linkFade 0.4s ease forwards;
+}
+
+.nav-links a:nth-child(1) { animation-delay: 0.1s; }
+.nav-links a:nth-child(2) { animation-delay: 0.2s; }
+.nav-links a:nth-child(3) { animation-delay: 0.3s; }
+.nav-links a:nth-child(4) { animation-delay: 0.4s; }
+.nav-links a:nth-child(5) { animation-delay: 0.5s; }
+.nav-links a:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes linkFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* animasi hover halus */
+.nav-links a:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+    .auth-buttons { 
+      display: flex;
+      gap: 1rem;
+    }
+    .auth-buttons .btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+    
+    .auth-buttons .btn-outline { 
+      background-color: var(--bg-white);
+      color: var(--text-dark);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+    .auth-buttons .btn-outline:hover {
+      background-color: var(--primary-color-light);
+      color: var(--primary-color-dark);
+      border-color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+    
+    .auth-buttons-mobile { 
+      display: none; 
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+    .auth-buttons-mobile .btn {
+      width: 100%; 
+      justify-content: center; 
+    }
+    .auth-buttons-mobile .btn i {
+       font-size: 1em; 
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.75rem;
+      color: var(--text-dark);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-color-light) 0%, var(--secondary-color-dark) 100%);
+  padding-top: 8rem; 
+  padding-bottom: 6rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ROCKET 1 */
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 70px;
+  background: linear-gradient(to top, #f87171, #fbbf24);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 80%;
+  left: -10%;
+  animation: flyRocket 6s linear infinite;
+  opacity: 0.8;
+}
+
+/* ROCKET 2 */
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 50px;
+  background: linear-gradient(to top, #60a5fa, #3b82f6);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 70%;
+  left: -15%;
+  animation: flyRocket 7s linear infinite 2s; /* delay 2s */
+  opacity: 0.8;
+}
+
+/* ROCKET tambahan via pseudo-element lain (menggunakan hero-container::before) */
+.hero-container::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 60px;
+  background: linear-gradient(to top, #34d399, #10b981);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 75%;
+  left: -20%;
+  animation: flyRocket 8s linear infinite 4s; /* delay 4s */
+  opacity: 0.8;
+}
+
+/* Animasi roket */
+@keyframes flyRocket {
+  0%   { transform: translateX(0) translateY(0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { transform: translateX(120vw) translateY(-50vh) rotate(20deg); }
+  90%  { opacity: 1; }
+  100% { transform: translateX(120vw) translateY(-50vh) rotate(20deg); opacity: 0; }
+}
+
+
+    .hero-container {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .hero-title span {
+      transform: rotate(10deg);        /* standard */
+  -webkit-transform: rotate(10deg); /* Safari/Chrome */
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-light);
+      margin-bottom: 2.5rem;
+      max-width: 550px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .stat-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+    .stat-number {
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    .hero-image-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero-image-wrapper img {
+        border-radius: var(--border-radius-lg);
+        box-shadow: 0 20px 50px hsla(var(--primary-hue), 50%, 20%, 0.2);
+        animation: float-hero 6s ease-in-out infinite;
+        max-height: 450px;
+        object-fit: cover;
+    }
+    @keyframes float-hero {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: var(--bg-white);
+      border-radius: var(--border-radius-lg);
+      padding: 2.5rem 2rem;
+      transition: var(--transition-cubic);
+      border: 1px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow);
+      border-color: var(--primary-color);
+    }
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+    }
+    .service-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      color: var(--primary-color);
+      padding: 1rem;
+      background-color: var(--primary-color-light);
+      border-radius: 50%;
+      line-height: 1;
+    }
+    .service-title {
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .service-description {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .service-link {
+      color: var(--primary-color);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: gap 0.3s ease;
+    }
+    .service-link:hover {
+      gap: 0.6rem;
+    }
+    .service-link i {
+      transition: transform 0.3s ease;
+    }
+    .service-link:hover i {
+      transform: translateX(3px);
+    }
+
+
+    .ewallet {
+      background-color: var(--bg-white);
+    }
+    .ewallet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .ewallet-title h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .ewallet-title p {
+      color: var(--text-light);
+      max-width: 500px;
+    }
+    .ewallet-controls {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .ewallet-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-cubic);
+      color: var(--primary-color);
+      font-size: 1.1rem;
+    }
+    .ewallet-btn:hover {
+      background-color: var(--primary-color);
+      color: var(--text-white);
+      border-color: var(--primary-color);
+      transform: scale(1.1);
+    }
+    .ewallet-slider {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding: 1rem 0.5rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .ewallet-slider::-webkit-scrollbar { display: none; }
+
+/* ===== Animasi ewallet-card ===== */
+.ewallet-card {
+  min-width: 200px;
+  max-width: 200px;
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.3s ease;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--border-color);
+
+  /* Animasi masuk (slide + fade) */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardIn 0.5s forwards;
+}
+
+@keyframes cardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ewallet-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s ease;
+}
+
+.ewallet-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.ewallet-card:hover .ewallet-logo {
+  transform: scale(1.15);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efek klik tombol slider */
+.ewallet-card.active-click {
+  transform: scale(1.07) translateY(-5px);
+  box-shadow: 0 18px 28px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+    .ewallet-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .ewallet-desc {
+      font-size: 0.875rem;
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+    .ewallet-link {
+      font-size: 0.9rem;
+    }
+
+
+    .feature-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+      flex-wrap: wrap;
+      background-color: var(--primary-color-light);
+      padding: 0.5rem;
+      border-radius: var(--border-radius-lg);
+    }
+    .tab-btn {
+      padding: 0.75rem 1.75rem;
+      background-color: transparent;
+      border: none;
+      border-radius: var(--border-radius-md);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-cubic);
+      color: var(--text-light);
+      font-size: 1rem;
+    }
+    .tab-btn.active {
+      background-color: var(--primary-color);
+      color: var(--text-white);
+      box-shadow: 0 4px 10px hsla(var(--primary-hue), 100%, 60%, 0.25);
+    }
+    .tab-content { display: none; animation: fadeInContent 0.5s ease; }
+    .tab-content.active { display: block; }
+    @keyframes fadeInContent {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .feature-item {
+      background-color: var(--bg-white);
+      border-radius: var(--border-radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-cubic);
+      border-left: 4px solid transparent;
+    }
+    .feature-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-left-color: var(--primary-color);
+    }
+    .feature-item h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+    }
+    .feature-item h3 i {
+      color: var(--primary-color);
+      font-size: 1.3em;
+    }
+    .feature-item p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+
+    .pricing { background-color: var(--bg-white); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      align-items: stretch; 
+    }
+    .pricing-card {
+      background-color: var(--bg-white);
+      border-radius: var(--border-radius-lg);
+      padding: 2.5rem;
+      text-align: center;
+      border: 1px solid var(--border-color);
+      transition: var(--transition-cubic);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+    .pricing-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: var(--shadow);
+      border-color: var(--primary-color);
+    }
+    .pricing-card.popular {
+      border: 2px solid var(--primary-color);
+      transform: scale(1.05);
+    }
+    .pricing-card.popular:hover {
+      transform: translateY(-10px) scale(1.07);
+    }
+    .popular-badge {
+      position: absolute;
+      top: 20px;
+      right: -35px;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      color: var(--text-white);
+      padding: 0.35rem 2.5rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      transform: rotate(45deg);
+      letter-spacing: 0.5px;
+    }
+    .pricing-title {
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+    .pricing-price {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      margin-bottom: 1.75rem;
+      line-height: 1;
+    }
+    .pricing-price span {
+      font-size: 1rem;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-left: 0.25rem;
+    }
+    .pricing-features {
+      margin-bottom: 2.5rem;
+      text-align: left;
+      flex-grow: 1; 
+    }
+    .pricing-features li {
+      margin-bottom: 0.875rem;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+    }
+    .pricing-features li i {
+      color: var(--primary-color);
+      font-size: 1.1em;
+    }
+    .pricing-card .btn {
+      margin-top: auto; 
+    }
+
+
+    .testimonials { background-color: var(--primary-color-light); }
+    .testimonial-slider {
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+      padding: 1rem 0.5rem 2rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .testimonial-slider::-webkit-scrollbar { height: 8px; }
+    .testimonial-slider::-webkit-scrollbar-track { background: hsl(var(--primary-hue), 20%, 85%); border-radius: 10px; }
+    .testimonial-slider::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 10px; }
+    
+    .testimonial-card {
+      min-width: 340px;
+      max-width: 360px;
+      background-color: var(--bg-white);
+      border-radius: var(--border-radius-lg);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+      scroll-snap-align: start;
+      transition: var(--transition-cubic);
+      border: 1px solid var(--border-color);
+    }
+    .testimonial-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+    }
+    .testimonial-rating {
+      color: hsl(45, 100%, 50%);
+      margin-bottom: 1.25rem;
+      font-size: 1.1rem;
+    }
+    .testimonial-text {
+      font-style: italic;
+      color: var(--text-light);
+      margin-bottom: 1.75rem;
+      position: relative;
+      padding-left: 2rem;
+      font-size: 1rem;
+    }
+    .testimonial-text::before {
+      content: '\f10d'; 
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      top: -5px;
+      left: 0;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      opacity: 0.8;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .author-avatar {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary-color-light);
+    }
+    .author-info h4 {
+      font-weight: 700;
+      margin-bottom: 0.1rem;
+    }
+    .author-info p {
+      font-size: 0.875rem;
+      color: var(--text-light);
+    }
+
+
+    .cta {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-color-dark));
+      color: var(--text-white);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta .container { position: relative; z-index: 1; }
+    .cta::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150%;
+        height: 150%;
+        background-image: radial-gradient(circle, hsla(0,0%,100%,.05) 1px, transparent 1px);
+        background-size: 20px 20px;
+        transform: translate(-50%,-50%);
+        animation: cta-pattern 60s linear infinite;
+    }
+    @keyframes cta-pattern{ 0%{ background-position: 0 0; } 100%{ background-position: 1200px 1200px; } }
+
+    .cta h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+    .cta p {
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .btn-light-cta {
+      background-color: var(--bg-white);
+      color: var(--primary-color);
+      box-shadow: 0 4px 15px hsla(0, 0%, 0%, 0.1);
+    }
+    .btn-light-cta:hover {
+      background-color: var(--bg-light);
+      transform: translateY(-3px) scale(1.03);
+    }
+    .btn-outline-light-cta {
+      background-color: transparent;
+      color: var(--text-white);
+      border: 2px solid var(--text-white);
+    }
+    .btn-outline-light-cta:hover {
+      background-color: hsla(0, 0%, 100%, 0.1);
+      transform: translateY(-3px) scale(1.03);
+    }
+
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+    }
+    .faq-question {
+      padding: 1.25rem 1.75rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 1.05rem;
+    }
+    .faq-question:hover {
+      background-color: var(--primary-color-light);
+    }
+    .faq-question i {
+      transition: transform 0.3s ease;
+      color: var(--primary-color);
+      font-size: 1.1rem;
+    }
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      padding: 0 1.75rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+    .faq-item.active .faq-answer {
+      padding: 0.5rem 1.75rem 1.5rem;
+      max-height: 500px; 
+    }
+
+
+    footer {
+      background-color: var(--text-dark);
+      color: hsla(0, 0%, 100%, 0.7);
+      padding: 5rem 0 2rem;
+    }
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+    }
+    .footer-logo img { height: 35px; }
+    .footer-logo-text { font-size: 1.5rem; color: var(--text-white); }
+    .footer-about p { margin: 1.5rem 0; line-height: 1.8; font-size: 0.95rem; }
+    .footer-social { display: flex; gap: 1rem; }
+    .footer-social a {
+      color: var(--text-white);
+      font-size: 1.25rem;
+      transition: var(--transition-cubic);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: hsla(0, 0%, 100%, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-social a:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-4px) scale(1.1);
+    }
+    .footer-links h3, .footer-contact h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-white);
+      margin-bottom: 1.75rem;
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+    .footer-links h3::after, .footer-contact h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+    .footer-links li { margin-bottom: 0.875rem; }
+    .footer-links a {
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover {
+      color: var(--text-white);
+      transform: translateX(5px);
+    }
+    .footer-links a i { font-size: 0.8em; opacity: 0.7; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.875rem;
+      margin-bottom: 1.125rem;
+      font-size: 0.95rem;
+    }
+    .contact-item i {
+      margin-top: 4px;
+      color: var(--primary-color);
+      font-size: 1.1em;
+    }
+    .contact-item a:hover { color: var(--text-white); }
+    .footer-bottom {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .footer-bottom a { color: var(--primary-color-light); font-weight: 500; }
+    .footer-bottom a:hover { text-decoration: underline; }
+
+
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: var(--text-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-cubic);
+      z-index: 999;
+      box-shadow: var(--shadow);
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+    .back-to-top:hover {
+      background-color: var(--primary-color-dark);
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    @media (max-width: 992px) {
+      nav {
+        gap: 0;
+      }
+      .hero-container { flex-direction: column; text-align: center; }
+      .hero-content { margin-bottom: 3rem; }
+      .hero-buttons, .hero-stats { justify-content: center; }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--bg-white);
+        padding: 6rem 2rem 2rem;
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        gap: 1.5rem; 
+        z-index: 998;
+        transition: left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        overflow-y: auto; 
+      }
+      .nav-links.active { left: 0; }
+      .nav-links a { font-size: 1.1rem; }
+      
+      .header-container .auth-buttons { 
+         display: none;
+      }
+      .nav-links.active .auth-buttons-mobile { 
+        display: flex;
+      }
+      .mobile-menu-btn { display: flex; z-index: 999; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 4rem 0; }
+      .section-title h2 { font-size: 2rem; }
+      .section-title p { font-size: 1rem; }
+      .hero-title { font-size: clamp(2rem, 6vw, 2.8rem); }
+      .footer-container { grid-template-columns: 1fr; }
+    }
+    .animate__animated.animate__fadeInUp {
+        --animate-distance: 30px;
+    }
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 6px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.08);
+  transform: scale(1.1);
+}
+
+body[data-theme="dark"] .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* mobile aman */
+@media (max-width: 768px) {
+  .theme-toggle {
+    margin-right: 4px;
+  }
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --header-footer-bg: #f8f8f8;
+  --card-bg: #f0f0f0;
+}
+
+body[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --header-footer-bg: #1e1e1e;
+  --card-bg: #1a1a1a;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+header,
+footer {
+  background-color: var(--header-footer-bg);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.card,
+section {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Popup info */
+.floating-info {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Tampil */
+.floating-info.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.floating-info button {
+  margin-left: 1rem;
+  padding: 0.3rem 0.7rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.header-actions {
+  display: flex;
+  flex-direction: column; /* KUNCI UTAMA */
+  align-items: center;
+  gap: 8px;
+}
+
+/* posisi di header */
+.header {
+  position: relative;
+}
+
+.header-actions {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="container header-container">
+      <a href="/" class="logo">
+        <img src="/media/logo.png" alt="FannyFa Store Logo">
+        
+        <div class="logo-text">FannyFa Store</div>
+      </a>
+      
+      <nav>
+
+        <!-- 🔥 TOMBOL DARK / LIGHT (BARU) -->
+<div class="header-actions">
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+    <i id="themeIcon" class="fas fa-moon"></i>
+  </button>
+  <button class="mobile-menu-btn" aria-label="Toggle Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+</div>
+          <div class="auth-buttons-mobile">
+            <button class="btn btn-outline" onclick="window.location.href='/login'">
+              <i class="fas fa-sign-in-alt"></i> Masuk
+            </button>
+            <button class="btn btn-primary" onclick="window.location.href='/register'">
+              <i class="fas fa-user-plus"></i> Daftar
+            </button>
+          </div>
+        </div>
+        
+        <div class="auth-buttons">
+          <button class="btn btn-outline" onclick="window.location.href='/login'">
+            Masuk <i class="fas fa-sign-in-alt"></i>
+          </button>
+          <button class="btn btn-primary" onclick="window.location.href='/register'">
+            Daftar <i class="fas fa-user-plus"></i>
+        </button>
+        
+        <div class="nav-links">
+        <a href="/" class="logo">
+        <img src="/media/logo.png" alt="FannyFa Store Logo"><p>FannyFa Developer</p>
+          <a href="/" class="active">Beranda <i class="fas fa-home"></i></a>
+          <a href="#layanan">Layanan <i class="fas fa-box-open"></i></a>
+          <a href="#ewallet">Produk <i class="fas fa-shop"></i></a>
+          <a href="#fitur">Fitur <i class="fas fa-magic"></i></a>
+          <a href="#harga">Harga <i class="fas fa-money-bill-wave"></i></a>
+          <a href="https://wa.me/6285624179853" target="_blank" rel="noopener noreferrer">Kontak <i class="fas fa-phone"></i></a>
+          <div class="hero-buttons">
+            <button class="btn btn-primary animate__animated animate__pulse animate__infinite animate__slower" onclick="window.location.href='/chatai'">
+              Chat Dengan Ai <i class="fas fa-robot"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content animate__animated animate__fadeInLeft">
+          <h1 class="hero-title">Solusi Integrasi <span>Produk Unggul</span></h1>
+          <p class="hero-subtitle">
+            Semua kebutuhan digital Anda ada di satu tempat. Mulai dari panel Pterodactyl, VPS handal, hingga bot WhatsApp otomatis yang aman, cepat, dan mudah digunakan untuk bisnis dan hiburan.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary animate__animated animate__pulse animate__infinite animate__slower" onclick="window.location.href='https://wa.me/6285624179853?text=.menu'">
+              Mulai Sekarang <i class="fas fa-rocket"></i>
+            </button>
+            <button class="btn btn-secondary" onclick="window.location.href='#fitur'">
+              Pelajari Fitur <i class="fas fa-info-circle"></i>
+            </button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+              <div class="stat-icon"><i class="fas fa-users"></i></div>
+              <div>
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Pengguna Aktif</div>
+              </div>
+            </div>
+            <div class="stat-item animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+              <div class="stat-icon"><i class="fas fa-sync-alt"></i></div>
+              <div>
+                <div class="stat-number">500K+</div>
+                <div class="stat-label">Transaksi Berhasil</div>
+              </div>
+            </div>
+            <div class="stat-item animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+              <div class="stat-icon"><i class="fas fa-cogs"></i></div>
+              <div>
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Integrasi Tersedia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-wrapper animate__animated animate__fadeInRight">
+            <picture>
+                <!-- <source srcset="/media/banner.png" type="image/webp"> 
+                <source srcset="https://files.catbox.moe/fz0fd8.jpg" type="image/png">
+                <img src="https://files.catbox.moe/fz0fd8.jpg" alt="FannyFa Store Platform">-->
+            </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="layanan">
+      <div class="container">
+        <div class="section-title animate__animated animate__fadeInUp">
+          <h2>Layanan Terlengkap</h2>
+          <p>Kami menyediakan solusi komprehensif untuk semua kebutuhan transaksi digital dan integrasi bisnis Anda.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+            <div class="service-icon"><i class="fas fa-sim-card"></i></div>
+            <h3 class="service-title">Topup Pulsa & Data</h3>
+            <p class="service-description">Isi ulang pulsa dan paket data semua operator dengan harga terbaik dan proses instan.</p>
+            <a href="https://wa.me/6285624179853?text=.menu" class="service-link">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            <div class="service-icon"><i class="fas fa-gamepad"></i></div>
+            <h3 class="service-title">Jasa Afk Fish It</h3>
+            <p class="service-description">Developer juga menyediakan jasa seperti afk di roblox</p>
+            <a href="https://wa.me/6285624179853?text=.menu" class="service-link">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+            <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+            <h3 class="service-title">Integrasi H2H API</h3>
+            <p class="service-description">Hubungkan sistem Anda dengan mudah melalui API kami yang handal dan dokumentasi lengkap.</p>
+            <a href="https://wa.me/6285624179853?text=.menu" class="service-link">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+ <div class="service-icon">
+        <i class="fas fa-robot"></i>
+    </div>
+            <h3 class="service-title">Paket ChatBot Ai</h3>
+            <p class="service-description">Mau bot yang bisa jawab chat otomatis? Paket Chatbot AI kami siap pakai kapan saja!.</p>
+            <a href="https://wa.me/6285624179853?text=.menu" class="service-link">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ewallet section" id="ewallet">
+      <div class="container">
+        <div class="ewallet-header">
+          <div class="ewallet-title">
+            <h2>Beli produk favoritmu</h2>
+            <p>Topup saldo e-wallet jadi lebih mudah, cepat, dan praktis dengan berbagai pilihan.</p>
+          </div>
+          <div class="ewallet-controls">
+            <button class="ewallet-btn" id="ewallet-prev" aria-label="Previous E-Wallet"><i class="fas fa-chevron-left"></i></button>
+            <button class="ewallet-btn" id="ewallet-next" aria-label="Next E-Wallet"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+        <div class="ewallet-slider" id="ewallet-slider">
+          <div class="ewallet-card">
+            <img src="https://iili.io/fMWSX5u.png" alt="Panel Pterodactyl" class="ewallet-logo" loading="lazy">
+            <h4 class="ewallet-name">Panel Pterodactyl</h4>
+            <p class="ewallet-desc">Server siap pakai, transaksi lancar semua lebih gampang pakai Petrodactyl!.</p>
+            <a href="https://wa.me/6285624179853?text=.menu" class="btn btn-primary btn-sm ewallet-link">Beli Sekarang</a>
+          </div>
+<div class="floating-info" id="floating-info">
+  <span id="info-text"></span>
+  <button id="info-confirm">Beli</button>
+</div>
+          <div class="ewallet-card">
+            <img src="https://iili.io/fMX2PcP.png" alt="VPS" class="ewallet-logo" loading="lazy">
+            <h4 class="ewallet-name">VPS</h4>
+            <p class="ewallet-desc">VPS cepat, stabil, dan siap mendukung semua kebutuhan digitalmu.</p>
+            <a href="https://wa.me/6285624179853?text=.menu" class="btn btn-primary btn-sm ewallet-link">Beli Sekarang</a>
+          </div>
+<div class="floating-info" id="floating-info">
+  <span id="info-text"></span>
+  <button id="info-confirm">Beli</button>
+</div>
+          <div class="ewallet-card">
+            <img src="https://iili.io/fMXiGWu.png" alt="Dana" class="ewallet-logo" loading="lazy">
+            <h4 class="ewallet-name">Bot Wa</h4>
+            <p class="ewallet-desc">Beli dan sesuaikan bot whatsApp mu sendiri.</p>
+            <a href="https://wa.me/6285624179853?text=.menu" class="btn btn-primary btn-sm ewallet-link">Beli Sekarang</a>
+          </div>
+<div class="floating-info" id="floating-info">
+  <span id="info-text"></span>
+  <button id="info-confirm">Beli</button>
+</div>
+          <div class="ewallet-card">
+            <img src="https://iili.io/fMhxwMX.png" alt="LinkAja" class="ewallet-logo" loading="lazy">
+            <h4 class="ewallet-name">Afk Roblox</h4>
+            <p class="ewallet-desc">Cloud Murah Aman Dan Terpercaya.</p>
+            <a href="https://wa.me/6285624179853?text=.menu" class="btn btn-primary btn-sm ewallet-link">Beli Sekarang</a>
+          </div>
+<div class="floating-info" id="floating-info">
+  <span id="info-text"></span>
+  <button id="info-confirm">Beli</button>
+</div>
+          <div class="ewallet-card">
+            <img src="https://iili.io/fMhEfte.png" alt="ShopeePay" class="ewallet-logo" loading="lazy">
+            <h4 class="ewallet-name">TopUp All Game</h4>
+            <p class="ewallet-desc">Belanja lebih hemat dengan FannyFa Store.</p>
+            <a href="https://wa.me/6285624179853?text=.menu" class="btn btn-primary btn-sm ewallet-link">Beli Sekarang</a>
+          </div>
+<div class="floating-info" id="floating-info">
+  <span id="info-text"></span>
+  <button id="info-confirm">Beli</button>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features section" id="fitur">
+      <div class="container">
+        <div class="section-title animate__animated animate__fadeInUp">
+          <h2>Kenapa Memilih FannyFa Store?</h2>
+          <p>Kami menawarkan fitur-fitur unggulan yang dirancang untuk memberikan pengalaman terbaik bagi Anda.</p>
+        </div>
+        <div class="feature-tabs">
+          <button class="tab-btn active" data-tab="tab1">Kecepatan & Efisiensi</button>
+          <button class="tab-btn" data-tab="tab2">Keamanan Terjamin</button>
+          <button class="tab-btn" data-tab="tab3">Kemudahan Penggunaan</button>
+        </div>
+        <div class="tab-content active" id="tab1">
+          <div class="feature-grid">
+            <div class="feature-item"><h3 class="feature-title"><i class="fas fa-bolt"></i> Proses Transaksi Instan</h3><p>Semua transaksi diproses secara otomatis dan selesai dalam hitungan detik, memastikan kepuasan pelanggan Anda.</p></div>
+            <div class="feature-item"><h3 class="feature-title"><i class="fas fa-server"></i> Infrastruktur Andal</h3><p>Didukung oleh server berkinerja tinggi dengan uptime 99.9%, menjamin layanan selalu tersedia.</p></div>
+            <div class="feature-item"><h3 class="feature-title"><i class="fas fa-tachometer-alt"></i> API Super Cepat</h3><p>API kami dirancang untuk responsivitas maksimal, memberikan waktu respons di bawah 500ms.</p></div>
+          </div>
+        </div>
+        <div class="tab-content" id="tab2">
+          <div class="feature-grid">
+            <div class="feature-item"><h3 class="feature-title"><i class="fas fa-shield-alt"></i> Enkripsi Data End-to-End</h3><p>Data transaksi Anda diamankan dengan teknologi enkripsi standar industri terkini, dari awal hingga akhir.</p></div>
+            <div class="feature-item"><h3 class="feature-title"><i class="fas fa-user-shield"></i> Proteksi Akun Ganda</h3><p>Fitur autentikasi dua faktor (2FA) untuk lapisan keamanan tambahan pada akun Anda.</p></div>
+            <div class="feature-item"><h3 class="feature-title"><i class="fas fa-history"></i> Audit Trail Lengkap</h3><p>Setiap aktivitas tercatat secara detail, memudahkan pelacakan dan memastikan transparansi.</p></div>
+          </div>
+        </div>
+        <div class="tab-content" id="tab3">
+          <div class="feature-grid">
+            <div class="feature-item"><h3 class="feature-title"><i class="fas fa-columns"></i> Dashboard Intuitif</h3><p>Kelola semua aspek bisnis Anda dengan mudah melalui dashboard yang dirancang dengan baik dan ramah pengguna.</p></div>
+            <div class="feature-item"><h3 class="feature-title"><i class="fas fa-book-open"></i> Dokumentasi Komprehensif</h3><p>Panduan API yang jelas dan lengkap, disertai contoh kode untuk berbagai bahasa pemrograman populer.</p></div>
+            <div class="feature-item"><h3 class="feature-title"><i class="fas fa-headset"></i> Dukungan Pelanggan 24/7</h3><p>Tim dukungan profesional kami siap membantu Anda kapan saja melalui berbagai saluran komunikasi.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing section" id="harga">
+      <div class="container">
+        <div class="section-title animate__animated animate__fadeInUp">
+          <h2>Paket Harga Fleksibel</h2>
+          <p>Pilih paket yang paling sesuai dengan skala dan kebutuhan bisnis Anda, tanpa biaya tersembunyi.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+            <h3 class="pricing-title">Integrasi API</h3>
+            <div class="pricing-price">Gratis</div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> Akses API Penuh</li>
+              <li><i class="fas fa-check-circle"></i> Riwayat Transaksi (15 Terakhir)</li>
+              <li><i class="fas fa-check-circle"></i> Tanpa Batas Request</li>
+              <li><i class="fas fa-check-circle"></i> Dokumentasi API Lengkap</li>
+              <li><i class="fas fa-times-circle"></i> Dukungan Prioritas</li>
+            </ul>
+            <button class="btn btn-primary" onclick="window.location.href='https://wa.me/6285624179853?text=.menu'">Mulai Gratis</button>
+          </div>
+          <div class="pricing-card popular animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            <div class="popular-badge">POPULER</div>
+            <h3 class="pricing-title">Integrasi Bot WhatsApp</h3>
+            <div class="pricing-price">Rp 50K<span>/2x Update</span></div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> Source Code Bot WhatsApp</li>
+              <li><i class="fas fa-check-circle"></i> Gratis Update 2x</li>
+              <li><i class="fas fa-check-circle"></i> Gratis Panel 30 Hari</li>
+              <li><i class="fas fa-check-circle"></i> Akses API Penuh</li>
+              <li><i class="fas fa-check-circle"></i> Dukungan Prioritas</li>
+            </ul>
+            <button class="btn btn-primary" onclick="window.location.href='https://wa.me/6285624179853?text=.menu'">Pilih Paket</button>
+          </div>
+          <div class="pricing-card animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+            <h3 class="pricing-title">Integrasi Website</h3>
+            <div class="pricing-price">Rp 400K<span>/Sekali Bayar</span></div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check-circle"></i> Source Code Website Full</li>
+              <li><i class="fas fa-check-circle"></i> Bantuan Instalasi</li>
+              <li><i class="fas fa-check-circle"></i> Gratis Update Minor 1x</li>
+              <li><i class="fas fa-check-circle"></i> Akses API Penuh</li>
+              <li><i class="fas fa-check-circle"></i> Dukungan Premium</li>
+            </ul>
+            <button class="btn btn-primary" onclick="window.location.href='https://wa.me/6285624179853?text=.menu'">Pilih Paket</button>
+          </div>
+        </div>
+      </div>
+
+    <section class="faq section">
+      <div class="container">
+        <div class="section-title animate__animated animate__fadeInUp">
+          <h2>Pertanyaan yang Sering Diajukan</h2>
+          <p>Temukan jawaban cepat untuk pertanyaan umum seputar layanan FannyFa Store.</p>
+        </div>
+        <div class="faq-container" style="max-width:800px; margin: 0 auto;">
+          <div class="faq-item">
+            <div class="faq-question"><span>Bagaimana cara mendaftar di FannyFa Store?</span><i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Klik tombol "Daftar" di pojok kanan atas, isi formulir dengan data valid, verifikasi email Anda, dan akun Anda siap digunakan!</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>Metode pembayaran apa saja yang diterima?</span><i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Kami mendukung transfer bank (BCA, Mandiri, BRI, BNI), e-wallet (Panel Pterodactyl, VPS, Dana, LinkAja), QRIS, dan virtual account.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>Berapa lama proses transaksi topup?</span><i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Mayoritas transaksi diproses instan (kurang dari 1 menit). Beberapa produk mungkin memerlukan waktu sedikit lebih lama tergantung kebijakan provider.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>Apakah ada biaya tersembunyi?</span><i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Tidak, kami berkomitmen pada transparansi. Semua biaya (jika ada) akan ditampilkan dengan jelas sebelum Anda menyelesaikan transaksi.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2 class="animate__animated animate__fadeInUp">Siap Mengoptimalkan Bisnis Anda?</h2>
+        <p class="animate__animated animate__fadeInUp" data-wow-delay="0.2s">Bergabunglah dengan ribuan pengguna FannyFa Store dan rasakan kemudahan transaksi digital serta integrasi H2H terbaik.</p>
+        <div class="cta-buttons animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+          <button class="btn btn-light-cta" onclick="window.location.href='/auth/register'">
+            Daftar Sekarang Gratis <i class="fas fa-user-plus"></i>
+          </button>
+          <button class="btn btn-outline-light-cta" onclick="window.location.href='https://wa.me/6285624179853'" target="_blank" rel="noopener noreferrer">
+            Konsultasi via WhatsApp <i class="fab fa-whatsapp"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-about">
+        <a href="/" class="logo footer-logo">
+          <img src="/media/logo.png" alt="FannyFa Store Logo" loading="lazy">
+          <div class="footer-logo-text">FannyFa Store</div>
+        </a>
+        <p>Nikmati layanan topup, pembayaran digital, VPS, dan bot otomatis dengan teknologi canggih, aman, dan terpercaya. Semua kebutuhan bisnis digital Anda, dalam satu platform.</p>
+        <div class="footer-social">
+          <a href="https://t.me/FannyFa Store" target="_blank" rel="noopener noreferrer" aria-label="Telegram FannyFa Store"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://www.tiktok.com/@ciaasoft.official" target="_blank" rel="noopener noreferrer" aria-label="TikTok CiaaSoft Official"><i class="fab fa-tiktok"></i></a>
+          <a href="https://whatsapp.com/channel/0029Vb6kNMF0G0Xr1BovPz19" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel FannyFa Store"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Tautan Navigasi</h3>
+        <ul>
+          <li><a href="/"><i class="fas fa-angle-right"></i> Beranda</a></li>
+          <li><a href="#layanan"><i class="fas fa-angle-right"></i> Layanan</a></li>
+          <li><a href="#fitur"><i class="fas fa-angle-right"></i> Fitur Unggulan</a></li>
+          <li><a href="#harga"><i class="fas fa-angle-right"></i> Paket Harga</a></li>
+          <li><a href="#faq"><i class="fas fa-angle-right"></i> FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Produk Populer</h3>
+        <ul>
+          <li><a href="https://wa.me/6285624179853?text=.menu"><i class="fas fa-angle-right"></i> Topup Pulsa All Operator</a></li>
+          <li><a href="https://wa.me/6285624179853?text=.menu"><i class="fas fa-angle-right"></i> Diamond Mobile Legends</a></li>
+          <li><a href="#ewallet"><i class="fas fa-angle-right"></i> Saldo Dana & Panel Pterodactyl</a></li>
+          <li><a href="https://wa.me/6285624179853?text=.menu"><i class="fas fa-angle-right"></i> Token Listrik PLN</a></li>
+          <li><a href="https://wa.me/6285624179853?text=.menu"><i class="fas fa-angle-right"></i> API H2H Server</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Hubungi Kami</h3>
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Tegal, Jawa Tengah, Adiwerna</span></div>
+        <div class="contact-item"><i class="fas fa-phone-alt"></i><a href="tel:+6285624179853">+62 856 2417 9853</a></div>
+        <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:admin@FannyFa">admin@FannyFa</a></div>
+        <div class="contact-item"><i class="fas fa-headset"></i><span>Dukungan: Setiap Hari, 24 Jam</span></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      © <span id="currentYear"></span> FannyFa Store. Hak Cipta Dilindungi. </a>.
+      <br><a href="#">Syarat & Ketentuan</a> | <a href="#">Kebijakan Privasi</a>
+    </div>
+  </footer>
+
+  <div class="back-to-top" id="backToTop" aria-label="Kembali ke Atas">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const navLinks = document.querySelector('.nav-links');
+      const header = document.getElementById('header');
+      const backToTopBtn = document.getElementById('backToTop');
+      const currentYearEl = document.getElementById('currentYear');
+      
+      if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
+
+      mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
+        mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+      });
+
+      document.querySelectorAll('.nav-links a, .auth-buttons-mobile .btn').forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (link.getAttribute('href') && link.getAttribute('href').startsWith('#')) {
+            // Internal anchor link
+          } else {
+            // External link or button with onclick
+          }
+
+          if ((link.tagName === 'A' && (link.getAttribute('href').startsWith('#') || link.getAttribute('href') === '/')) || 
+              (e.currentTarget.classList.contains('btn') && e.currentTarget.closest('.auth-buttons-mobile'))) {
+              if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                document.body.style.overflow = '';
+              }
+          }
+          
+          if (link.tagName === 'A' && (link.getAttribute('href').startsWith('#') || link.getAttribute('href') === '/')) {
+            document.querySelectorAll('.nav-links a').forEach(navLink => navLink.classList.remove('active'));
+            if(link.closest('.auth-buttons-mobile') === null){ 
+                 link.classList.add('active');
+            }
+          }
+        });
+      });
+      
+      const setActiveNavLink = () => {
+          let scrollY = window.pageYOffset;
+          document.querySelectorAll('section').forEach(current => {
+              const sectionHeight = current.offsetHeight;
+              const sectionTop = current.offsetTop - 150; 
+              let sectionId = current.getAttribute('id');
+
+              if (sectionId) {
+                const navLink = document.querySelector('.nav-links a[href*="#' + sectionId + '"]');
+                if(navLink) { 
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+                        navLink.classList.add('active');
+                    }
+                }
+              }
+          });
+          
+          if (scrollY < (document.getElementById('layanan')?.offsetTop - 150 || 300) ) {
+             document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+             const berandaLink = document.querySelector('.nav-links a[href="/"]');
+             if(berandaLink) berandaLink.classList.add('active');
+          }
+      };
+
+
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          tabContents.forEach(c => c.classList.remove('active'));
+          btn.classList.add('active');
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(otherItem => otherItem.classList.remove('active'));
+          if (!isActive) item.classList.add('active');
+        });
+      });
+
+      const ewalletSlider = document.getElementById('ewallet-slider');
+      if (ewalletSlider) {
+          const ewalletPrev = document.getElementById('ewallet-prev');
+          const ewalletNext = document.getElementById('ewallet-next');
+          const ewalletCard = ewalletSlider.querySelector('.ewallet-card');
+          const scrollAmount = ewalletCard ? ewalletCard.offsetWidth + parseFloat(getComputedStyle(ewalletSlider).gap || '0px') : 220;
+          
+          ewalletPrev.addEventListener('click', () => ewalletSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+          ewalletNext.addEventListener('click', () => ewalletSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+      }
+
+
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 50) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+
+        if (window.pageYOffset > 300) backToTopBtn.classList.add('visible');
+        else backToTopBtn.classList.remove('visible');
+        
+        setActiveNavLink();
+      });
+      setActiveNavLink(); 
+
+      backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      if (typeof WOW === 'function') {
+          new WOW({
+              boxClass: 'animate__animated',
+              animateClass: 'animate__animated',
+              offset: 50,
+              mobile: true,
+              live: true
+          }).init();
+      }
+    });
+
+const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+  const htmlEl = document.body;
+
+  // Ambil theme tersimpan atau preferensi sistem
+  const savedTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  function setTheme(theme) {
+  htmlEl.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+
+  if (theme === "dark") {
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
+  } else {
+    themeIcon.classList.remove("fa-sun");
+    themeIcon.classList.add("fa-moon");
+  }
+}
+  // Init theme saat load
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else {
+    setTheme(prefersDark ? "dark" : "light");
+  }
+
+  // Toggle saat tombol diklik
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = htmlEl.getAttribute("data-theme");
+    setTheme(currentTheme === "dark" ? "light" : "dark");
+  });
+  
+const buyButtons = document.querySelectorAll('.ewallet-link');
+const floatingInfo = document.getElementById('floating-info');
+const infoText = document.getElementById('info-text');
+const infoConfirm = document.getElementById('info-confirm');
+
+buyButtons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(); // cegah langsung ke WhatsApp
+    const card = btn.closest('.ewallet-card');
+    const name = card.querySelector('.ewallet-name').textContent;
+    const desc = card.querySelector('.ewallet-desc').textContent;
+
+    infoText.innerHTML = `<strong>${name}</strong>: ${desc}`;
+    floatingInfo.classList.add('show');
+
+    // tombol konfirmasi lanjut beli
+    infoConfirm.onclick = () => {
+      window.location.href = btn.href;
+    };
+
+    // otomatis hilang setelah 5 detik
+    setTimeout(() => {
+      floatingInfo.classList.remove('show');
+    }, 5000);
+  });
+});
+
+window.addEventListener("load", () => {
+    document.querySelector(".nav-links").classList.add("show");
+  });
+
+  fetch('/api/me')
+    .then(res => res.json())
+    .then(user => {
+      const authButtons = document.querySelector('.auth-buttons-mobile');
+      if (user.username) {
+        // User sudah login, ganti tombol dengan profil
+        authButtons.innerHTML = `
+          <button class="btn btn-primary" onclick="window.location.href='/profile'">
+            <i class="fas fa-user"></i> ${user.username}
+          </button>
+        `;
+      } else {
+        // user belum login, biarkan tombol login/daftar
+      }
+    })
+    .catch(err => {
+      console.error(err);
+    });
+    fetch('/api/me')
+  .then(res => res.json())
+  .then(user => {
+    if (user.login) {
+      document.getElementById('nav').innerHTML = `
+        <a href="/dashboard">Dashboard</a>
+        <a href="/profile">Profil</a>
+        <a href="/logout">Logout</a>
+      `
+    }
+  })
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+</body>
+</html>
