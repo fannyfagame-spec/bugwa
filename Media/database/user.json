@@ -1,1 +1,16 @@
-
+[
+  "DB",
+  {
+    "username": "admin",
+    "key": "123456",
+    "expired": 2131043755690,
+    "role": "owner",
+    "privateSender": "6283197813991"
+  },
+  {
+    "username": "fannyfa",
+    "key": "123456",
+    "expired": 1772257787007,
+    "role": "vip"
+  }
+]
