@@ -164,6 +164,57 @@ function getUsers() {
   }
 }
 
+function getCPUInfo() {
+    const cpus = os.cpus();
+
+    let idle = 0;
+    let total = 0;
+
+    cpus.forEach(core => {
+        for (let type in core.times) {
+            total += core.times[type];
+        }
+        idle += core.times.idle;
+    });
+
+    return { idle, total };
+}
+
+let prev = getCPUInfo();
+
+app.get("/api/system", (req, res) => {
+
+    const current = getCPUInfo();
+
+    const idleDiff = current.idle - prev.idle;
+    const totalDiff = current.total - prev.total;
+
+    let cpuUsage = 0;
+
+    if (totalDiff > 0) {
+        cpuUsage = 100 - Math.floor(100 * idleDiff / totalDiff);
+    }
+
+    prev = current;
+
+    // ===== RAM =====
+    const totalRAM = os.totalmem();
+    const freeRAM = os.freemem();
+    const usedRAM = totalRAM - freeRAM;
+    const ramPercent = Math.floor((usedRAM / totalRAM) * 100);
+
+    res.json({
+        cpuUsage,
+        cores: os.cpus().length,
+        platform: os.platform(),
+        hostname: os.hostname(),
+        arch: os.arch(),
+        ramPercent,
+        ramUsedGB: (usedRAM / 1024 / 1024 / 1024).toFixed(2),
+        ramTotalGB: (totalRAM / 1024 / 1024 / 1024).toFixed(2)
+    });
+});
+
 // ==================== PRIVATE SENDER SYSTEM ====================
 
 // Fungsi untuk mendapatkan sender privat user
