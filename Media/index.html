@@ -424,6 +424,50 @@ body {
     border-radius: 15px;
 }
 
+.stat-card-mini{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 16px;
+    border-radius:16px;
+
+    font-size:14px;
+    color:#fff;
+
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+
+    cursor:pointer;
+    transition:all 0.25s ease;
+    position: relative;
+    top: -10px;
+}
+
+.stat-card-mini i{
+    font-size:16px;
+    opacity:0.8;
+}
+
+.stat-card-mini small{
+    margin-left:auto;
+    font-size:11px;
+    opacity:0.6;
+}
+
+.stat-card-mini:hover{
+    transform:translateY(-4px);
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.25);
+    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+.stat-card-mini:active{
+    transform:scale(0.97);
+}
+
 .manager-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* hover lebih visible di dark */
@@ -448,6 +492,22 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
+}
+
+.stat-hover{
+    cursor:pointer;
+    transition:all 0.3s ease;
+    
+}
+
+.stat-hover:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 18px rgba(255,255,255,0.08); /* lebih soft dari manager */
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.stat-hover:active{
+    transform:scale(0.97);
 }
 
 /* icon lebih bold agar kontras di dark */
@@ -1397,89 +1457,69 @@ body {
             color: var(--text-muted);
         }
 
-        /* NAV DOCK - IMPROVED SPACING */
-        .nav-container {
-            position: fixed;
-            bottom: 25px;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            z-index: 100;
-            pointer-events: none;
-        }
-        
-        .floating-nav {
-            pointer-events: auto;
-            background: rgba(19, 19, 31, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 12px 25px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-        }
-        
-        .nav-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: var(--text-muted);
-            transition: 0.3s;
-            position: relative;
-            cursor: pointer;
-            padding: 10px 18px;
-            border-radius: 15px;
-            min-width: 85px;
-        }
-        
-        .nav-link i {
-            font-size: 24px;
-            margin-bottom: 4px;
-            transition: 0.3s;
-        }
+/* NAV BAR - POLISHED APP STYLE */
+.nav-container {
+    position: fixed;
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    pointer-events: none;
+}
 
-        .nav-link span {
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            font-family: 'Rajdhani';
-        }
-        
-        .nav-link.active {
-            color: #fff;
-            background: rgba(168, 85, 247, 0.15);
-        }
-        
-        .nav-link.active i {
-            color: var(--accent-purple);
-        }
+.floating-nav {
+    pointer-events: auto;
 
-        @media (max-width: 768px) {
-            .container { padding: 15px; }
-            .logo-circle { width: 80px; height: 80px; }
-            .username { font-size: 20px; }
-            .video-wrapper { height: 140px; }
-            .floating-nav { gap: 20px; padding: 10px 20px; }
-            .nav-link { min-width: 75px; padding: 8px 14px; }
-            .nav-link i { font-size: 22px; }
-            .nav-link span { font-size: 10px; }
-        }
-        @media (max-width: 768px) {
-            .container { padding: 15px; }
-            .logo-circle { width: 80px; height: 80px; }
-            .username { font-size: 20px; }
-            .video-wrapper { height: 140px; }
-            .floating-nav { gap: 20px; padding: 10px 20px; }
-            .nav-link { min-width: 75px; padding: 8px 14px; }
-            .nav-link i { font-size: 22px; }
-            .nav-link span { font-size: 10px; }
-        }
+    background: rgba(24,24,34,0.95);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    padding: 8px 18px;
+    border-radius: 28px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.nav-link {
+    padding: 6px 12px;
+    min-width: 60px;
+}
+
+.nav-link span {
+    font-size: 9px;
+}
+
+/* ACTIVE - white subtle */
+.nav-link.active {
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 0 18px rgba(255,255,255,0.12);
+}
+
+/* Icon naik halus */
+.nav-link.active i {
+    transform: translateY(-2px);
+}
+
+/* White indicator animation */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    width: 0;
+    height: 4px;
+    border-radius: 4px;
+    background: #ffffff;
+    transition: width .3s ease;
+}
+
+.nav-link.active::after {
+    width: 18px;
+}
 
         /* 🔥 PAIRING MODAL ANIMATIONS - TARUH DI SINI */
         @keyframes slideUp {
@@ -1698,7 +1738,7 @@ body {
 .draggable-fab {
     position: fixed;
     right: 20px;
-    bottom: 130px;
+    bottom: 90px;
     z-index: 9999;
 
     display: flex;
@@ -1721,6 +1761,7 @@ body {
     cursor: grab;
     box-shadow: 0 10px 25px rgba(0,0,0,0.6);
     transition: 0.3s ease;
+    
 }
 
 .fab-main:active {
@@ -1767,7 +1808,7 @@ body {
 .music-popup {
     position: fixed;
     left: 20px;
-    bottom: 115px; /* dinaikin lagi dari navbar */
+    bottom: 90px; /* dinaikin lagi dari navbar */
 
     width: 190px;
     padding: 10px 14px;
@@ -3146,6 +3187,61 @@ TOOLS APP CARD STYLE
 .mp-playing{
     animation: mpPulse 2s infinite;
 }
+
+.cpu-bar {
+    width: 100%;
+    height: 16px;
+    margin-top: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.cpu-fill {
+    height: 100%;
+    width: 0%;
+
+    background: linear-gradient(
+        90deg,
+        #6c5ce7,
+        #00cec9
+    );
+
+    border-radius: 20px;
+
+    transition: width 0.6s ease, background 0.3s ease;
+}
+
+/* RAM bar beda warna biar beda feel */
+#ramFill {
+    background: linear-gradient(
+        90deg,
+        #fd79a8,
+        #e84393
+    );
+}
+
+#cpuStatsPage .stat-card{
+    display:flex;
+    gap:20px;
+}
+
+#cpuStatsPage .stat-card > div{
+    flex:1;
+}
+
+/* Biar kecil & rapi */
+#cpuStatsPage h3{
+    font-size:15px;
+}
+
+#cpuStatsPage p{
+    font-size:13px;
+}
+
     </style>
 </head>
 <body>
@@ -3284,18 +3380,23 @@ TOOLS APP CARD STYLE
         </div>
     </div>
 </div>
-
             <h3 class="section-header">Account Statistics</h3>
-            
+<div class="stat-card-mini" onclick="openStats()">
+    <i class="fa-solid fa-microchip"></i>
+    <span>CPU Usage</span>
+    <small id="statsToggleText">Klik untuk melihat statistik</small>
+</div>
             <div class="account-grid">
-                <div class="stat-card">
+                <div class="stat-card stat-hover">
                     <div class="stat-header">
                         <div class="stat-icon purple">
                             <i class="fa-solid fa-user"></i>
                         </div>
                         <div class="stat-info">
                             <h3>Username</h3>
-                            <p class="purple" id="username">${username}</p>
+  <p class="purple" id="username" onclick="switchPage('manager')">
+        ${username}
+    </p>
                         </div>
                     </div>
                 </div>
@@ -3338,6 +3439,39 @@ TOOLS APP CARD STYLE
             </div>
         </div>
 
+<div id="cpuStatsPage" class="page">
+    <div class="stat-card">
+
+        <div>
+            <h3>CPU Statistics — <span id="cpuPercent">0</span>%</h3>
+
+            <div class="cpu-bar">
+                <div class="cpu-fill" id="cpuFill"></div>
+            </div>
+
+            <p>
+                Core: <span id="cpuCores">-</span><br>
+                Platform: <span id="cpuPlatform">-</span><br>
+                Host: <span id="cpuHost">-</span><br>
+                Arch: <span id="cpuArch">-</span>
+            </p>
+        </div>
+
+        <div>
+            <h3>RAM Usage — <span id="ramPercent">0</span>%</h3>
+
+            <div class="cpu-bar">
+                <div class="cpu-fill" id="ramFill"></div>
+            </div>
+
+            <p>
+                Used: <span id="ramUsed">0</span>GB /
+                <span id="ramTotal">0</span>GB
+            </p>
+        </div>
+
+    </div>
+</div>
         <!-- ATTACK PAGE (WhatsApp) -->
         <div id="attackPage" class="page">
             <header class="header">
@@ -3548,26 +3682,29 @@ TOOLS APP CARD STYLE
     </div>
 </div>
     <!-- FLOATING NAV - IMPROVED SPACING -->
-    <div class="nav-container">
-        <nav class="floating-nav">
-            <a class="nav-link active" onclick="switchPage('dashboard')">
-                <i class="fa-solid fa-house"></i>
-                <span>Home</span>
-            </a>
-            <a class="nav-link" onclick="switchPage('attack')">
-                <i class="fa-brands fa-whatsapp"></i>
-                <span>WhatsApp</span>
-            </a>
-            <a class="nav-link" onclick="switchPage('tools')">
-                <i class="fa-solid fa-tools"></i>
-                <span>tools</span>
-            </a>
-            <a class="nav-link" id="adminNavLink" onclick="switchPage('admin')">
-                <i class="fa-solid fa-user-shield"></i>
-                <span>Admin</span>
-            </a>
-        </nav>
-    </div>
+<div class="nav-container">
+    <nav class="floating-nav">
+        <a class="nav-link active" onclick="switchPage('dashboard')">
+            <i class="fa-regular fa-compass"></i>
+            <span>Home</span>
+        </a>
+
+        <a class="nav-link" onclick="switchPage('attack')">
+            <i class="fa-regular fa-message"></i>
+            <span>WhatsApp</span>
+        </a>
+
+        <a class="nav-link" onclick="switchPage('tools')">
+            <i class="fa-regular fa-square-plus"></i>
+            <span>Tools</span>
+        </a>
+
+        <a class="nav-link" id="adminNavLink" onclick="switchPage('admin')">
+            <i class="fa-regular fa-id-badge"></i>
+            <span>Admin</span>
+        </a>
+    </nav>
+</div>
 
 <!-- Tools -->
 
@@ -5517,6 +5654,62 @@ function mpFormatTime(seconds){
     const sec = Math.floor(seconds % 60).toString().padStart(2,"0");
     return min + ":" + sec;
 }
+
+function openStats(){
+    const page = document.getElementById("cpuStatsPage");
+    const text = document.getElementById("statsToggleText");
+
+    if(!page.classList.contains("active")){
+        page.classList.add("active");
+        text.innerText = "Klik untuk menutup statistik";
+
+        setTimeout(() => {
+            page.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }, 200);
+
+    }else{
+        page.classList.remove("active");
+        text.innerText = "Klik untuk melihat statistik";
+    }
+}
+async function updateSystem() {
+    try {
+        const res = await fetch("http://localhost:3000/api/system");
+        const data = await res.json();
+
+        // CPU
+        document.getElementById("cpuPercent").innerText = data.cpuUsage ?? 0;
+        document.getElementById("cpuFill").style.width = (data.cpuUsage ?? 0) + "%";
+        document.getElementById("cpuCores").innerText = data.cores;
+        document.getElementById("cpuPlatform").innerText = data.platform;
+        document.getElementById("cpuHost").innerText = data.hostname;
+        document.getElementById("cpuArch").innerText = data.arch;
+
+        // RAM
+        document.getElementById("ramPercent").innerText = data.ramPercent;
+        document.getElementById("ramFill").style.width = data.ramPercent + "%";
+        document.getElementById("ramUsed").innerText = data.ramUsedGB;
+        document.getElementById("ramTotal").innerText = data.ramTotalGB;
+
+        // Warning warna merah
+        if (data.cpuUsage > 80) {
+            document.getElementById("cpuFill").style.background = "red";
+        }
+
+        if (data.ramPercent > 80) {
+            document.getElementById("ramFill").style.background = "red";
+        }
+
+    } catch (err) {
+        console.log("Error:", err);
+    }
+}
+
+setInterval(updateSystem, 1000);
+updateSystem();
 
 async function deleteSender(number) {
     if (!confirm('⚠️ Yakin ingin menghapus sender ' + number + '?\n\nSemua session akan dihapus permanen!')) {
